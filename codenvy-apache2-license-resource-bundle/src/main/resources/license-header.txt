@@ -1,4 +1,4 @@
-Copyright [${h_inceptionYear}] - [${h_currentYear}] ${h_copyrightOwner}
+Copyright ${h_license_years} ${h_copyrightOwner}
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
