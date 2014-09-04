@@ -15,6 +15,7 @@
     <modules>
         <module>codenvy-eclipse-license-resource-bundle</module>
         <module>codenvy-codenvy-license-resource-bundle</module>
+        <module>codenvy-apache2-license-resource-bundle</module>
     </modules>
     <scm>
         <connection>scm:git:git://github.com/codenvy/codenvy-dev-resources.git</connection>
