@@ -4,7 +4,7 @@
     <parent>
         <artifactId>codenvy-dev-resources</artifactId>
         <groupId>com.codenvy.resources</groupId>
-        <version>4</version>
+        <version>5-SNAPSHOT</version>
     </parent>
     <artifactId>codenvy-apache2-license-resource-bundle</artifactId>
     <packaging>jar</packaging>
