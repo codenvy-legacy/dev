@@ -16,6 +16,7 @@
         <module>codenvy-eclipse-license-resource-bundle</module>
         <module>codenvy-codenvy-license-resource-bundle</module>
         <module>codenvy-apache2-license-resource-bundle</module>
+        <module>enforcer-rules</module>
     </modules>
     <scm>
         <connection>scm:git:git://github.com/codenvy/codenvy-dev-resources.git</connection>
@@ -23,7 +24,7 @@
         <tag>HEAD</tag>
         <url>https://github.com/codenvy/codenvy-dev-resources</url>
     </scm>
- <repositories>
+    <repositories>
         <repository>
             <id>codenvy-public-repo</id>
             <name>codenvy public</name>
