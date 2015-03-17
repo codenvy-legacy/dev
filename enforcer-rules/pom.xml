@@ -4,9 +4,10 @@
     <parent>
         <artifactId>codenvy-dev-resources</artifactId>
         <groupId>com.codenvy.resources</groupId>
-        <version>5</version>
+        <version>6-SNAPSHOT</version>
     </parent>
     <artifactId>enforcer-rules</artifactId>
+  <version>4</version>
     <name>enforcer-rules</name>
     <description>Additional custom rules for Maven Enforcer</description>
     <licenses>
