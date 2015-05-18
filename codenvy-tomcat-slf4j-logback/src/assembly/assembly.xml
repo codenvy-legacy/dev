@@ -18,11 +18,38 @@
             <includes>
                 <include>ch.qos.logback:logback-access</include>
                 <include>ch.qos.logback:logback-core</include>
+                <include>org.apache.tomcat:tomcat-catalina-jmx-remote</include>
             </includes>
         </dependencySet>
     </dependencySets>
 
     <fileSets>
+        <fileSet>
+            <directory>${project.build.directory}/dependency/apache-tomcat-${tomcat.version}</directory>
+            <outputDirectory></outputDirectory>
+            <excludes>
+                <exclude>**/webapps/**</exclude>
+                <exclude>**/bin/setenv.*</exclude>
+                <exclude>**/bin/*.sh</exclude>
+                <exclude>**/bin/catalina-tasks.xml</exclude>
+                <exclude>**/bin/tomcat-juli.jar</exclude>
+                <exclude>**/bin/*.tar.gz</exclude>
+                <exclude>**/conf/tomcat-users.xml</exclude>
+                <exclude>**/conf/server.xml</exclude>
+                <exclude>**/conf/logging.properties</exclude>
+
+            </excludes>
+        </fileSet>
+        <fileSet>
+            <directory>${project.build.directory}/dependency/apache-tomcat-${tomcat.version}</directory>
+            <outputDirectory></outputDirectory>
+            <includes>
+                <include>**/bin/*.sh</include>
+            </includes>
+            <fileMode>755</fileMode>
+        </fileSet>
+
+
         <fileSet>
             <directory>${project.basedir}/src/assembly</directory>
             <outputDirectory></outputDirectory>
@@ -38,6 +65,14 @@
             <includes>
                 <include>setenv.bat</include>
                 <include>setenv.sh</include>
+            </includes>
+            <fileMode>755</fileMode>
+        </fileSet>
+        <fileSet>
+            <directory>${project.build.directory}</directory>
+            <outputDirectory>bin</outputDirectory>
+            <includes>
+                <include>tomcat-juli.jar</include>
             </includes>
         </fileSet>
         <fileSet>

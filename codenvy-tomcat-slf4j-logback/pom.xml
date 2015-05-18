@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>codenvy-dev-resources</artifactId>
         <groupId>com.codenvy.resources</groupId>
         <version>6-SNAPSHOT</version>
     </parent>
-    <artifactId>codenvy-codenvy-tomcat-slf4j-logback</artifactId>
+    <artifactId>codenvy-tomcat-slf4j-logback</artifactId>
     <packaging>jar</packaging>
     <properties>
         <logback.version>1.1.2</logback.version>
@@ -31,12 +32,41 @@
         </dependency>
         <dependency>
             <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-catalina-jmx-remote</artifactId>
+            <version>${tomcat.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>tomcat-coyote</artifactId>
+                    <groupId>org.apache.tomcat</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>tomcat-catalina</artifactId>
+                    <groupId>org.apache.tomcat</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>tomcat-juli</artifactId>
+                    <groupId>org.apache.tomcat</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
             <artifactId>tomcat-juli</artifactId>
             <version>${tomcat.version}</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>jcl-over-slf4j</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jul-to-slf4j</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>log4j-over-slf4j</artifactId>
             <version>${slf4j.version}</version>
         </dependency>
         <dependency>
@@ -64,6 +94,7 @@
                             <artifactSet>
                                 <includes>
                                     <include>org.apache.tomcat:tomcat-juli</include>
+                                    <include>org.apache.tomcat:tomcat-catalina-jmx-remote</include>
                                     <include>org.slf4j:jcl-over-slf4j</include>
                                     <include>org.slf4j:slf4j-api</include>
                                     <include>ch.qos.logback:logback-classic</include>
@@ -135,7 +166,7 @@
                 <executions>
                     <execution>
                         <id>make-assembly</id>
-                        <phase>install</phase>
+                        <phase>package</phase>
                         <goals>
                             <goal>single</goal>
                         </goals>
@@ -160,39 +191,34 @@
                     </filesets>
                 </configuration>
             </plugin>
+
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-enforcer-plugin</artifactId>
+                <artifactId>maven-dependency-plugin</artifactId>
                 <executions>
                     <execution>
-                        <id>enforce-maven</id>
+                        <id>unpack-tomcat</id>
+                        <phase>prepare-package</phase>
                         <goals>
-                            <goal>enforce</goal>
+                            <goal>unpack</goal>
                         </goals>
-                    </execution>
-                    <execution>
-                        <id>enforce-clean</id>
-                        <phase>pre-clean</phase>
-                        <goals>
-                            <goal>enforce</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>enforce-site</id>
-                        <phase>pre-site</phase>
-                        <goals>
-                            <goal>enforce</goal>
-                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>org.apache.tomcat</groupId>
+                                    <artifactId>tomcat</artifactId>
+                                    <type>zip</type>
+                                    <version>${tomcat.version}</version>
+                                    <overWrite>false</overWrite>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
                     </execution>
                 </executions>
-                <configuration>
-                    <rules>
-                        <requireMavenVersion>
-                            <version>[${maven.min-version},)</version>
-                        </requireMavenVersion>
-                    </rules>
-                </configuration>
             </plugin>
+
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
