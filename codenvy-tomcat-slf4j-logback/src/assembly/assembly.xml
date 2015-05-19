@@ -83,6 +83,8 @@
                 <include>logback.xml</include>
                 <include>server.xml</include>
                 <include>logging.properties</include>
+                <include>jmxremote.access</include>
+                <include>jmxremote.password</include>
             </includes>
         </fileSet>
         <fileSet>

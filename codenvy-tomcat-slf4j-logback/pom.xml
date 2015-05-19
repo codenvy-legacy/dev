@@ -94,9 +94,10 @@
                             <artifactSet>
                                 <includes>
                                     <include>org.apache.tomcat:tomcat-juli</include>
-                                    <include>org.apache.tomcat:tomcat-catalina-jmx-remote</include>
                                     <include>org.slf4j:jcl-over-slf4j</include>
                                     <include>org.slf4j:slf4j-api</include>
+                                    <include>org.slf4j:jul-to-slf4j</include>
+                                    <include>org.slf4j:log4j-over-slf4j</include>
                                     <include>ch.qos.logback:logback-classic</include>
                                     <include>ch.qos.logback:logback-core</include>
                                 </includes>
@@ -113,6 +114,18 @@
                                 </filter>
                                 <filter>
                                     <artifact>org.slf4j:jcl-over-slf4j</artifact>
+                                    <excludes>
+                                        <exclude>META-INF/services/**</exclude>
+                                    </excludes>
+                                </filter>
+                                <filter>
+                                    <artifact>org.slf4j:jul-to-slf4</artifact>
+                                    <excludes>
+                                        <exclude>META-INF/services/**</exclude>
+                                    </excludes>
+                                </filter>
+                                <filter>
+                                    <artifact>org.slf4j:log4j-over-slf4j</artifact>
                                     <excludes>
                                         <exclude>META-INF/services/**</exclude>
                                     </excludes>
