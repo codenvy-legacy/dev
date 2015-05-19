@@ -2,7 +2,7 @@
 # CODENVY CONFIDENTIAL
 # __________________
 #
-#  [2012] - [2013] Codenvy, S.A.
+#  [2012] - [2015] Codenvy, S.A.
 #  All Rights Reserved.
 #
 # NOTICE:  All information contained herein is, and remains
@@ -24,7 +24,15 @@ fi
 #Global JAVA options
 [ -z "${JAVA_OPTS}" ]  && JAVA_OPTS="-Xms256m -Xmx2048m -XX:MaxPermSize=256m -server"
 
+#Tomcat options
+[ -z "${CATALINA_OPTS}" ]  && CATALINA_OPTS="-Dcom.sun.management.jmxremote  \
+                                             -Dcom.sun.management.jmxremote.ssl=false \
+                                             -Dcom.sun.management.jmxremote.authenticate=false \
+                                             -Djuli-logback.configurationFile=file:$CATALINA_HOME/conf/logback.xml \
+                                             -Dcodenvy.local.conf.dir=${CODENVY_LOCAL_CONF_DIR}"
 
-export CLASSPATH="$CLASSPATH:${CATALINA_HOME}/conf/:${JAVA_HOME}/lib/tools.jar"
-export JAVA_OPTS="$JAVA_OPTS -Djuli-logback.configurationFile=file:$CATALINA_HOME/conf/logback.xml -Dcodenvy.local.conf.dir=${CODENVY_LOCAL_CONF_DIR}"
+#Class path
+[ -z "${CLASSPATH}" ]  && CLASSPATH="${CATALINA_HOME}/conf/:${JAVA_HOME}/lib/tools.jar"
+
+
 

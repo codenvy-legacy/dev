@@ -186,6 +186,8 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <appendAssemblyId>false</appendAssemblyId>
+                    <updateOnly>false</updateOnly>
                     <descriptor>${project.basedir}/src/assembly/assembly.xml</descriptor>
                 </configuration>
             </plugin>
