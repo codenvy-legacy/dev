@@ -16,7 +16,6 @@
             <outputDirectory>lib</outputDirectory>
             <includes>
                 <include>ch.qos.logback:logback-access</include>
-                <include>ch.qos.logback:logback-core</include>
                 <include>org.apache.tomcat:tomcat-catalina-jmx-remote</include>
             </includes>
         </dependencySet>
@@ -35,6 +34,7 @@
                 <exclude>**/bin/*.tar.gz</exclude>
                 <exclude>**/conf/tomcat-users.xml</exclude>
                 <exclude>**/conf/server.xml</exclude>
+                <exclude>**/conf/context.xml</exclude>
                 <exclude>**/conf/logging.properties</exclude>
 
             </excludes>
@@ -81,6 +81,7 @@
                 <include>logback-access-localhost.xml</include>
                 <include>logback.xml</include>
                 <include>server.xml</include>
+                <include>context.xml</include>
                 <include>logging.properties</include>
                 <include>jmxremote.access</include>
                 <include>jmxremote.password</include>
@@ -93,13 +94,5 @@
                 <include>tomcat-juli.jar</include>
             </includes>
         </fileSet>
-        <fileSet>
-            <directory>${project.build.directory}</directory>
-            <outputDirectory>src</outputDirectory>
-            <includes>
-                <include>tomcat-juli-sources.jar</include>
-            </includes>
-        </fileSet>
     </fileSets>
-
 </assembly>
