@@ -10,7 +10,7 @@
             <fileNamePattern>${codenvy.logs.dir}/logs/%d{yyyy/MM/dd}/catalina-%i.log</fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <!-- or whenever the file size reaches 2MB -->
-                <maxFileSize>2MB</maxFileSize>
+                <maxFileSize>20MB</maxFileSize>
             </timeBasedFileNamingAndTriggeringPolicy>
         </rollingPolicy>
         <encoder>
