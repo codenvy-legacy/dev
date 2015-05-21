@@ -29,7 +29,6 @@ fi
                                              -Dcom.sun.management.jmxremote.ssl=false \
                                              -Dcom.sun.management.jmxremote.authenticate=false \
                                              -Dcodenvy.logs.dir=$CATALINA_HOME/logs \
-                                             -Djuli-logback.configurationFile=file:$CATALINA_HOME/conf/logback.xml \
                                              -Dcodenvy.local.conf.dir=${CODENVY_LOCAL_CONF_DIR}"
 
 #Class path

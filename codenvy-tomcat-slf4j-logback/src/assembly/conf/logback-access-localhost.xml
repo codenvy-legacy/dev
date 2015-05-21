@@ -15,7 +15,7 @@
             <pattern>common</pattern>
         </encoder>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${codenvy.logs.dir}/logs/%d{yyyy/MM/dd}/localhost-access-%i.log</fileNamePattern>
+            <fileNamePattern>${codenvy.logs.dir}/%d{yyyy/MM/dd}/localhost-access-%i.log</fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <maxFileSize>20MB</maxFileSize> 
             </timeBasedFileNamingAndTriggeringPolicy>
