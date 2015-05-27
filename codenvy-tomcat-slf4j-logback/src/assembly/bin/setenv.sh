@@ -24,15 +24,19 @@ fi
 #Global JAVA options
 [ -z "${JAVA_OPTS}" ]  && JAVA_OPTS="-Xms256m -Xmx2048m -XX:MaxPermSize=256m -server"
 
+#Global LOGS DIR
+[ -z "${CODENVY_LOGS_DIR}" ]  && CODENVY_LOGS_DIR="$CATALINA_HOME/logs"
+
+
+
 #Tomcat options
 [ -z "${CATALINA_OPTS}" ]  && CATALINA_OPTS="-Dcom.sun.management.jmxremote  \
                                              -Dcom.sun.management.jmxremote.ssl=false \
                                              -Dcom.sun.management.jmxremote.authenticate=false \
-                                             -Dcodenvy.logs.dir=$CATALINA_HOME/logs \
                                              -Dcodenvy.local.conf.dir=${CODENVY_LOCAL_CONF_DIR}"
 
 #Class path
 [ -z "${CLASSPATH}" ]  && CLASSPATH="${CATALINA_HOME}/conf/:${JAVA_HOME}/lib/tools.jar"
 
 
-
+export JAVA_OPTS="$JAVA_OPTS  -Dcodenvy.logs.dir=${CODENVY_LOGS_DIR}"
