@@ -17,7 +17,20 @@
             <includes>
                 <include>ch.qos.logback:logback-access</include>
                 <include>org.apache.tomcat:tomcat-catalina-jmx-remote</include>
-
+            </includes>
+        </dependencySet>
+        <dependencySet>
+            <unpack>false</unpack>
+            <scope>runtime</scope>
+            <outputDirectory>endorsed</outputDirectory>
+            <includes>
+                <include>ch.qos.logback:logback-core</include>
+                <include>ch.qos.logback:logback-classic</include>
+                <include>org.slf4j:jul-to-slf4j</include>
+                <include>org.slf4j:log4j-over-slf4j</include>
+                <include>org.slf4j:slf4j-api</include>
+                <include>javax.mail:mail</include>
+                <include>javax.activation:activation</include>
             </includes>
         </dependencySet>
     </dependencySets>
