@@ -27,7 +27,7 @@ fi
 #Global LOGS DIR
 [ -z "${CODENVY_LOGS_DIR}" ]  && CODENVY_LOGS_DIR="$CATALINA_HOME/logs"
 
-
+[ -z "${JPDA_ADDRESS}" ]  && JPDA_ADDRESS="8000"
 
 #Tomcat options
 [ -z "${CATALINA_OPTS}" ]  && CATALINA_OPTS="-Dcom.sun.management.jmxremote  \
