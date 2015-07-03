@@ -16,6 +16,8 @@
         <module>codenvy-eclipse-license-resource-bundle</module>
         <module>codenvy-codenvy-license-resource-bundle</module>
         <module>codenvy-apache2-license-resource-bundle</module>
+        <module>codenvy-tomcat7</module>
+        <module>codenvy-tomcat8-slf4j-logback</module>
     </modules>
     <scm>
         <connection>scm:git:git://github.com/codenvy/codenvy-dev-resources.git</connection>
@@ -23,6 +25,13 @@
         <tag>HEAD</tag>
         <url>https://github.com/codenvy/codenvy-dev-resources</url>
     </scm>
+    <properties>
+        <javax.mail.version>1.4.4</javax.mail.version>
+        <logback.version>1.1.2</logback.version>
+        <slf4j.version>1.7.6</slf4j.version>
+        <tomcat7.version>7.0.62</tomcat7.version>
+        <tomcat8.version>8.0.23</tomcat8.version>
+    </properties>
     <repositories>
         <repository>
             <id>codenvy-public-repo</id>
