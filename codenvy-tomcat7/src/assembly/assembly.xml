@@ -9,7 +9,7 @@
     <includeBaseDirectory>false</includeBaseDirectory>
     <fileSets>
         <fileSet>
-            <directory>${project.build.directory}/dependency/apache-tomcat-${tomcat.version}</directory>
+            <directory>${project.build.directory}/dependency/apache-tomcat-${tomcat7.version}</directory>
             <outputDirectory></outputDirectory>
             <excludes>
                 <exclude>**/webapps/**</exclude>
@@ -17,14 +17,14 @@
             </excludes>
         </fileSet>
         <fileSet>
-            <directory>${project.build.directory}/dependency/apache-tomcat-${tomcat.version}</directory>
+            <directory>${project.build.directory}/dependency/apache-tomcat-${tomcat7.version}</directory>
             <outputDirectory>webapps</outputDirectory>
             <excludes>
                 <exclude>**/*</exclude>
             </excludes>
         </fileSet>
         <fileSet>
-            <directory>${project.build.directory}/dependency/apache-tomcat-${tomcat.version}</directory>
+            <directory>${project.build.directory}/dependency/apache-tomcat-${tomcat7.version}</directory>
             <outputDirectory></outputDirectory>
             <includes>
                 <include>**/bin/*.sh</include>

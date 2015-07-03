@@ -6,14 +6,9 @@
         <groupId>com.codenvy.resources</groupId>
         <version>6-SNAPSHOT</version>
     </parent>
-    <artifactId>codenvy-tomcat-slf4j-logback</artifactId>
+    <artifactId>codenvy-tomcat8-slf4j-logback</artifactId>
     <packaging>jar</packaging>
-    <properties>
-        <javax.mail.version>1.4.4</javax.mail.version>
-        <logback.version>1.1.2</logback.version>
-        <slf4j.version>1.7.6</slf4j.version>
-        <tomcat.version>8.0.22</tomcat.version>
-    </properties>
+    <name>Tomcat 8 with slf4j and logback</name>
     <dependencies>
         <dependency>
             <groupId>ch.qos.logback</groupId>
@@ -38,7 +33,7 @@
         <dependency>
             <groupId>org.apache.tomcat</groupId>
             <artifactId>tomcat-catalina-jmx-remote</artifactId>
-            <version>${tomcat.version}</version>
+            <version>${tomcat8.version}</version>
             <exclusions>
                 <exclusion>
                     <artifactId>tomcat-coyote</artifactId>
@@ -57,7 +52,7 @@
         <dependency>
             <groupId>org.apache.tomcat</groupId>
             <artifactId>tomcat-juli</artifactId>
-            <version>${tomcat.version}</version>
+            <version>${tomcat8.version}</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -208,7 +203,7 @@
                                     <groupId>org.apache.tomcat</groupId>
                                     <artifactId>tomcat</artifactId>
                                     <type>zip</type>
-                                    <version>${tomcat.version}</version>
+                                    <version>${tomcat8.version}</version>
                                     <overWrite>false</overWrite>
                                 </artifactItem>
                             </artifactItems>
@@ -227,7 +222,7 @@
                         </manifest>
                         <manifestEntries>
                             <Build-Time>${maven.build.timestamp}</Build-Time>
-                            <Tomcat-Classloader-Version>${tomcat.version}</Tomcat-Classloader-Version>
+                            <Tomcat-Classloader-Version>${tomcat8.version}</Tomcat-Classloader-Version>
                             <Slf4j-Version>${slf4j.version}</Slf4j-Version>
                             <Logback-Version>${logback.version}</Logback-Version>
                             <Os-Name>${os.name}</Os-Name>
