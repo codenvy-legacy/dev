@@ -9,7 +9,7 @@
     </parent>
     <groupId>com.codenvy.resources</groupId>
     <artifactId>codenvy-dev-resources</artifactId>
-    <version>7</version>
+    <version>8-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Development Resources for Codenvy projects</name>
     <modules>
@@ -22,7 +22,7 @@
     <scm>
         <connection>scm:git:git://github.com/codenvy/codenvy-dev-resources.git</connection>
         <developerConnection>scm:git:git@github.com:codenvy/codenvy-dev-resources.git</developerConnection>
-        <tag>7</tag>
+        <tag>HEAD</tag>
         <url>https://github.com/codenvy/codenvy-dev-resources</url>
     </scm>
     <properties>
