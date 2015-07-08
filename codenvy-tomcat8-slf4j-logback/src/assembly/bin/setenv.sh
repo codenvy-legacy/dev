@@ -36,7 +36,10 @@ fi
                                              -Dcodenvy.local.conf.dir=${CODENVY_LOCAL_CONF_DIR}"
 
 #Class path
-[ -z "${CLASSPATH}" ]  && CLASSPATH="${CATALINA_HOME}/conf/:${JAVA_HOME}/lib/tools.jar"
+CLASSPATH="${CATALINA_HOME}/conf/:${JAVA_HOME}/lib/tools.jar"
+if [ ! -z "${TOMCAT_CLASSPATH}" ]; then
+ CLASSPATH=${CLASSPATH}:${TOMCAT_CLASSPATH}
+fi
 
 
 export JAVA_OPTS="$JAVA_OPTS  -Dcodenvy.logs.dir=${CODENVY_LOGS_DIR}"
