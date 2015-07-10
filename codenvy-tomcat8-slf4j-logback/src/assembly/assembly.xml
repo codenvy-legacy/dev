@@ -77,7 +77,6 @@
             <includes>
                 <include>setenv.bat</include>
                 <include>setenv.sh</include>
-                <include>che*</include>
             </includes>
             <fileMode>755</fileMode>
         </fileSet>

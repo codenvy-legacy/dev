@@ -18,6 +18,7 @@
         <module>codenvy-apache2-license-resource-bundle</module>
         <module>codenvy-tomcat7</module>
         <module>codenvy-tomcat8-slf4j-logback</module>
+        <module>che-tomcat8-slf4j-logback</module>
     </modules>
     <scm>
         <connection>scm:git:git://github.com/codenvy/codenvy-dev-resources.git</connection>
