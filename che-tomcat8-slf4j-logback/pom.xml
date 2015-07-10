@@ -4,7 +4,7 @@
     <parent>
         <artifactId>codenvy-dev-resources</artifactId>
         <groupId>com.codenvy.resources</groupId>
-        <version>8</version>
+        <version>9-SNAPSHOT</version>
     </parent>
     <artifactId>che-tomcat8-slf4j-logback</artifactId>
     <packaging>jar</packaging>
