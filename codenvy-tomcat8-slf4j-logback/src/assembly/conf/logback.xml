@@ -28,7 +28,7 @@
         </filter>
     </appender>
 
-    <include optional="true" file="${codenvy.local.conf.dir}/logback/logback-additional-appenders.xml"/>
+    <include optional="true" file="${che.local.conf.dir}/logback/logback-additional-appenders.xml"/>
 
     <logger name="org.apache.catalina.loader" level="OFF"/>
     <logger name="org.apache.catalina.session.PersistentManagerBase" level="OFF"/>

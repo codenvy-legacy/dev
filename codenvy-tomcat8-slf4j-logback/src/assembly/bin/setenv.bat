@@ -16,8 +16,8 @@
 @REM from Codenvy S.A..
 @REM
 @echo off
-if "%CODENVY_LOCAL_CONF_DIR%"==""   (
-   echo Need to set CODENVY_LOCAL_CONF_DIR
+if "%CHE_LOCAL_CONF_DIR%"==""   (
+   echo Need to set CHE_LOCAL_CONF_DIR
    echo Press enter to exit...
    pause >nul
    exit
@@ -29,7 +29,7 @@ if "%CODENVY_LOGS_DIR%"=="" (set CODENVY_LOGS_DIR=%CATALINA_HOME%\logs)
 
 if "%JPDA_ADDRESS%"=="" (set JPDA_ADDRESS=8000)
 
-if "%CATALINA_OPTS%"=="" (set CATALINA_OPTS=-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Dcodenvy.local.conf.dir=%CODENVY_LOCAL_CONF_DIR%)
+if "%CATALINA_OPTS%"=="" (set CATALINA_OPTS=-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Dche.local.conf.dir=%CHE_LOCAL_CONF_DIR%)
 
 if "%CLASSPATH%"=="" (set CLASSPATH=%CATALINA_HOME%\conf\;%JAVA_HOME%\lib\tools.jar)
 
