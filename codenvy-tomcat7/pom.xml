@@ -4,7 +4,7 @@
     <parent>
         <artifactId>codenvy-dev-resources</artifactId>
         <groupId>com.codenvy.resources</groupId>
-        <version>9</version>
+        <version>10-SNAPSHOT</version>
     </parent>
     <artifactId>codenvy-tomcat7</artifactId>
     <packaging>jar</packaging>
