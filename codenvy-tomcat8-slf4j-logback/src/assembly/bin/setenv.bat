@@ -25,7 +25,7 @@ if "%CODENVY_LOCAL_CONF_DIR%"==""   (
 
 if "%JAVA_OPTS%"=="" (set JAVA_OPTS=-Xms256m -Xmx2048m -XX:MaxPermSize=256m -server)
 
-if "%CODENVY_LOGS_DIR%"=="" (set CODENVY_LOGS_DIR=%CATALINA_HOME%\logs)
+if "%CHE_LOGS_DIR%"=="" (set CHE_LOGS_DIR=%CATALINA_HOME%\logs)
 
 if "%JPDA_ADDRESS%"=="" (set JPDA_ADDRESS=8000)
 
@@ -33,7 +33,7 @@ if "%CATALINA_OPTS%"=="" (set CATALINA_OPTS=-Dcom.sun.management.jmxremote -Dcom
 
 if "%CLASSPATH%"=="" (set CLASSPATH=%CATALINA_HOME%\conf\;%JAVA_HOME%\lib\tools.jar)
 
-set LOG_OPTS=-Dcodenvy.logs.dir=%CODENVY_LOGS_DIR%
+set LOG_OPTS=-Dche.logs.dir=%CHE_LOGS_DIR%
 
 set JAVA_OPTS=%JAVA_OPTS% %LOG_OPTS%
 echo "======="
