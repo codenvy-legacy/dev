@@ -25,7 +25,7 @@ fi
 [ -z "${JAVA_OPTS}" ]  && JAVA_OPTS="-Xms256m -Xmx2048m -XX:MaxPermSize=256m -server"
 
 #Global LOGS DIR
-[ -z "${CODENVY_LOGS_DIR}" ]  && CODENVY_LOGS_DIR="$CATALINA_HOME/logs"
+[ -z "${CHE_LOGS_DIR}" ]  && CHE_LOGS_DIR="$CATALINA_HOME/logs"
 
 [ -z "${JPDA_ADDRESS}" ]  && JPDA_ADDRESS="8000"
 
@@ -42,4 +42,4 @@ if [ ! -z "${TOMCAT_CLASSPATH}" ]; then
 fi
 
 
-export JAVA_OPTS="$JAVA_OPTS  -Dcodenvy.logs.dir=${CODENVY_LOGS_DIR}"
+export JAVA_OPTS="$JAVA_OPTS  -Dche.logs.dir=${CHE_LOGS_DIR}"
