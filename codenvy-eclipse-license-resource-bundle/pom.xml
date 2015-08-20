@@ -4,7 +4,7 @@
     <parent>
         <artifactId>codenvy-dev-resources</artifactId>
         <groupId>com.codenvy.resources</groupId>
-        <version>10-SNAPSHOT</version>
+        <version>10</version>
     </parent>
     <artifactId>codenvy-eclipse-license-resource-bundle</artifactId>
     <packaging>jar</packaging>
