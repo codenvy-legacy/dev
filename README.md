@@ -1,4 +1,1 @@
-codenvyo-dev-resources
-=================
-
-Development Resources for Codenvy  projects
+Development Resources for Che and Codenvy  projects
