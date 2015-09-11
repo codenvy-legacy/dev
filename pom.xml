@@ -28,7 +28,6 @@
         <module>codenvy-eclipse-license-resource-bundle</module>
         <module>codenvy-codenvy-license-resource-bundle</module>
         <module>codenvy-apache2-license-resource-bundle</module>
-        <module>codenvy-tomcat7</module>
         <module>codenvy-tomcat8-slf4j-logback</module>
         <module>che-tomcat8-slf4j-logback</module>
         <module>che-codestyle</module>
