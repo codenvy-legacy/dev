@@ -78,6 +78,7 @@
             <directory>${project.basedir}/src/assembly</directory>
             <outputDirectory></outputDirectory>
             <includes>
+                <include>LICENSE-mit.txt</include>
                 <include>LICENSE-logback.txt</include>
                 <include>LICENSE-slf4j.txt</include>
                 <include>LICENSE-tomcat.txt</include>
