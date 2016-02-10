@@ -1,7 +1,7 @@
 CODENVY CONFIDENTIAL
 __________________
 
- [${h_inceptionYear}] - [${h_currentYear}] ${h_copyrightOwner}
+ ${h_license_years} ${h_copyrightOwner}
  All Rights Reserved.
 
 NOTICE:  All information contained herein is, and remains
