@@ -1,6 +1,3 @@
-CODENVY CONFIDENTIAL
-__________________
-
  ${h_license_years} ${h_copyrightOwner}
  All Rights Reserved.
 
