@@ -21,7 +21,7 @@
     </parent>
     <groupId>com.codenvy.resources</groupId>
     <artifactId>codenvy-dev-resources</artifactId>
-    <version>14</version>
+    <version>15-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Development Resources for Codenvy projects</name>
     <modules>
@@ -31,7 +31,7 @@
     <scm>
         <connection>scm:git:git://github.com/codenvy/codenvy-dev-resources.git</connection>
         <developerConnection>scm:git:git@github.com:codenvy/codenvy-dev-resources.git</developerConnection>
-        <tag>14</tag>
+        <tag>HEAD</tag>
         <url>https://github.com/codenvy/codenvy-dev-resources</url>
     </scm>
     <repositories>
